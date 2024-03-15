@@ -25,14 +25,10 @@ public class TestController {
         this.testService = testService;
     }
 
-//    @PostMapping(path = "/createTest")
-//    public ResponseEntity<TestDTO> addTest(@ModelAttribute TestDTO testDTO) {
-//        TestDTO testDTO1 = testService.createTest(testDTO);
-//        return ResponseEntity.status(HttpStatus.CREATED).body(testDTO1);
-//    }
-    @PostMapping("/createTest")
-    public ResponseEntity<TestDTO> addTest(@Valid @ModelAttribute TestDTO testDTO) {
-        TestDTO savedTestDTO = testService.createTest(testDTO);
-        return ResponseEntity.status(HttpStatus.CREATED).body(savedTestDTO);
+    @PostMapping(path = "/createTest")
+    public ResponseEntity<TestDTO> addTest(@RequestBody TestDTO testDTO) {
+        TestDTO testDTO1 = testService.createTest(testDTO);
+        return ResponseEntity.status(HttpStatus.CREATED).body(testDTO1);
     }
+
 }

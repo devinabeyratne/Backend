@@ -62,8 +62,8 @@ public class WebSecurityConfiguration {
                         .requestMatchers("/api/v1/logout").permitAll()
                         .requestMatchers("/api/v1/technician/**").permitAll()
                         .requestMatchers("/api/v1/test/**").permitAll()
-                        .requestMatchers("/api/v1/test/createTest").permitAll()
                         .requestMatchers("/api/v1/tests/**").permitAll()
+                        .requestMatchers("/api/v1/appointment/**").permitAll()
                         .anyRequest().authenticated()
                 )
                 .sessionManagement(session -> session

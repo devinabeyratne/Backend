@@ -20,9 +20,7 @@ public class TestServiceImpl implements TestService {
     }
 
     public TestDTO createTest(TestDTO testDTO){
-        if(testDTO.getTechnicianId() == null){
-            throw new IllegalArgumentException("Technician ID must not be null");
-        }
+
         Test test = new Test();
 
         test.setName(testDTO.getName());
