@@ -38,6 +38,7 @@ public class Test {
         testDTO.setDescription(description);
         testDTO.setDescription(price);
         testDTO.setTechnicianId(technician.getId());
+        testDTO.setTechnicianName(technician.getName());
 
         return testDTO;
 

@@ -11,5 +11,8 @@ public class TestDTO {
     private String description;
     private String price;
     private Long technicianId;
+    private String technicianName;
+
+
 
 }

@@ -29,6 +29,7 @@ public class TestServiceImpl implements TestService {
 
         Technician technician = technicianRepo.findById(testDTO.getTechnicianId()).orElseThrow();
 
+
         test.setTechnician(technician);
         return testRepo.save(test).getDTO();
     }

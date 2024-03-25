@@ -34,6 +34,4 @@ public class TechnicianController {
         return ResponseEntity.ok(technicianService.getAllTechnician());
     }
 
-
-
 }
